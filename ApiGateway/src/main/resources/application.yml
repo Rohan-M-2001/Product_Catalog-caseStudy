@@ -1,0 +1,28 @@
+server:
+  port: 8099
+
+ 
+
+zuul:
+  
+  prefix: /api
+  routes:
+    product catalog:
+      path: /products/**
+      serviceId: PRODUCTCATALOGAPPLICATION
+
+
+      
+spring:
+  application:
+    name: ApiGateway   
+    
+       
+    
+ 
+
+ 
+
+ 
+
+ 

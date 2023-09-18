@@ -1,0 +1,182 @@
+{"properties": [
+  {
+    "name": "user-managment",
+    "type": "java.lang.String",
+    "description": "A description for 'user-managment'"
+  },
+  {
+    "name": "product-managment",
+    "type": "java.lang.String",
+    "description": "A description for 'product-managment'"
+  },
+  {
+    "name": "cart-managment",
+    "type": "java.lang.String",
+    "description": "A description for 'cart-managment'"
+  },
+  {
+    "name": "prefix",
+    "type": "java.lang.String",
+    "description": "A description for 'prefix'"
+  },
+  {
+    "name": "server",
+    "type": "java.lang.String",
+    "description": "A description for 'server'"
+  },
+  {
+    "name": "port",
+    "type": "java.lang.String",
+    "description": "A description for 'port'"
+  },
+  {
+    "name": "zuul",
+    "type": "java.lang.String",
+    "description": "A description for 'zuul'"
+  },
+  {
+    "name": "routes",
+    "type": "java.lang.String",
+    "description": "A description for 'routes'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "path",
+    "type": "java.lang.String",
+    "description": "A description for 'path'"
+  },
+  {
+    "name": "url",
+    "type": "java.lang.String",
+    "description": "A description for 'url'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "CurrentWeather",
+    "type": "java.lang.String",
+    "description": "A description for 'CurrentWeather'"
+  },
+  {
+    "name": "current-weather",
+    "type": "java.lang.String",
+    "description": "A description for 'current-weather'"
+  },
+  {
+    "name": "current-weather",
+    "type": "java.lang.String",
+    "description": "A description for 'current-weather'"
+  },
+  {
+    "name": "prefix",
+    "type": "java.lang.String",
+    "description": "A description for 'prefix'"
+  },
+  {
+    "name": "port",
+    "type": "java.lang.String",
+    "description": "A description for 'port'"
+  }
+]}

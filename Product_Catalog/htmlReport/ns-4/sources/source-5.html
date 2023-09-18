@@ -1,0 +1,197 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > TokenManager</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.product_catalog.jwtutils</a>
+</div>
+
+<h1>Coverage Summary for Class: TokenManager (com.example.product_catalog.jwtutils)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">TokenManager</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.9%
+  </span>
+  <span class="absValue">
+    (26/28)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">TokenManager$MockitoMock$mXxHoioW</td>
+  </tr>
+  <tr>
+    <td class="name">TokenManager$MockitoMock$mXxHoioW$auxiliary$6QQuCcWo</td>
+  </tr>
+  <tr>
+    <td class="name">TokenManager$MockitoMock$mXxHoioW$auxiliary$BgxkGBWq</td>
+  </tr>
+  <tr>
+    <td class="name">TokenManager$MockitoMock$mXxHoioW$auxiliary$c5EnrpX0</td>
+  </tr>
+  <tr>
+    <td class="name">TokenManager$MockitoMock$mXxHoioW$auxiliary$dR9jVpry</td>
+  </tr>
+  <tr>
+    <td class="name">TokenManager$MockitoMock$mXxHoioW$auxiliary$rwgFL5RR</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.9%
+  </span>
+  <span class="absValue">
+    (26/28)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.product_catalog.jwtutils;
+&nbsp;
+&nbsp;import java.io.Serializable;
+&nbsp;import java.util.Date;
+&nbsp;import java.util.HashMap;
+&nbsp;import java.util.Map;
+&nbsp;
+&nbsp;import org.springframework.beans.factory.annotation.Value;
+&nbsp;import org.springframework.security.core.userdetails.UserDetails;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;
+&nbsp;import io.jsonwebtoken.Claims;
+&nbsp;import io.jsonwebtoken.Jwts;
+&nbsp;import io.jsonwebtoken.SignatureAlgorithm;
+&nbsp;
+&nbsp;@Component
+<b class="fc">&nbsp;public class TokenManager implements Serializable {</b>
+&nbsp;
+&nbsp;  private static final long serialVersionUID = 7008375124389347049L;
+&nbsp;
+&nbsp;  public static final long TOKEN_VALIDITY = 10L * 60 * 60;
+&nbsp;
+&nbsp;  @Value(&quot;${secret}&quot;)
+&nbsp;  private String jwtSecret;
+&nbsp;
+&nbsp;  public String generateJwtToken(UserDetails userDetails) {
+<b class="fc">&nbsp;    Map&lt;String, Object&gt; claims = new HashMap&lt;&gt;();</b>
+<b class="fc">&nbsp;    return Jwts.builder()</b>
+<b class="fc">&nbsp;        .setClaims(claims)</b>
+<b class="fc">&nbsp;        .setSubject(userDetails.getUsername())</b>
+<b class="fc">&nbsp;        .setIssuedAt(new Date(System.currentTimeMillis()))</b>
+<b class="fc">&nbsp;        .setExpiration(new Date(System.currentTimeMillis() + TOKEN_VALIDITY * 1000))</b>
+<b class="fc">&nbsp;        .signWith(SignatureAlgorithm.HS512, this.jwtSecret)</b>
+<b class="fc">&nbsp;        .compact();</b>
+&nbsp;  }
+&nbsp;
+&nbsp;  public Boolean validateJwtToken(String token, UserDetails userDetails) {
+<b class="fc">&nbsp;    String username = getUsernameFromToken(token);</b>
+<b class="fc">&nbsp;    if (username == null) {</b>
+<b class="fc">&nbsp;      return false; // Invalid token format</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    Claims claims;
+&nbsp;    try {
+<b class="fc">&nbsp;      claims = Jwts.parser()</b>
+<b class="fc">&nbsp;          .setSigningKey(this.jwtSecret)</b>
+<b class="fc">&nbsp;          .parseClaimsJws(token)</b>
+<b class="fc">&nbsp;          .getBody();</b>
+<b class="nc">&nbsp;    } catch (Exception e) {</b>
+<b class="nc">&nbsp;      return false; // Invalid token</b>
+<b class="fc">&nbsp;    }</b>
+&nbsp;
+<b class="fc">&nbsp;    Boolean isTokenExpired = claims.getExpiration().before(new Date());</b>
+<b class="fc">&nbsp;    return (username.equals(userDetails.getUsername()) &amp;&amp; !isTokenExpired);</b>
+&nbsp;  }
+&nbsp;
+&nbsp;  public String getUsernameFromToken(String token) {
+&nbsp;    try {
+<b class="fc">&nbsp;      final Claims claims = Jwts.parser()</b>
+<b class="fc">&nbsp;          .setSigningKey(this.jwtSecret)</b>
+<b class="fc">&nbsp;          .parseClaimsJws(token)</b>
+<b class="fc">&nbsp;          .getBody();</b>
+<b class="fc">&nbsp;      return claims.getSubject();</b>
+<b class="fc">&nbsp;    } catch (Exception e) {</b>
+&nbsp;      // Handle invalid token format gracefully
+<b class="fc">&nbsp;      return null; // or an appropriate response</b>
+&nbsp;    }
+&nbsp;  }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-18 11:26</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > JwtFilter</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.product_catalog.jwtutils</a>
+</div>
+
+<h1>Coverage Summary for Class: JwtFilter (com.example.product_catalog.jwtutils)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">JwtFilter</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    85.7%
+  </span>
+  <span class="absValue">
+    (18/21)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$3zcXSeVT</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$47ApEC6o</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$6WbIMjkI</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$7CZrZc9Y</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$9Eakc3Lw</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$bl0Jzsi1</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$cqowrtz5</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$cVG0nAAp</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$eM9TQ4nz</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$fwEa3FHn</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$ha7OQbhX</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$hCaRCe9y</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$KRxDqoiJ</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$MxryK6uY</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$T6q7pxt5</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$Tsh3o93l</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$vuzkYhdM</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$w11rvqEU</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$w2L6Hsir</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$WGUIG5eC</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$WwNtm2gR</td>
+  </tr>
+  <tr>
+    <td class="name">JwtFilter$MockitoMock$foGWxou2$auxiliary$xhrg675n</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    85.7%
+  </span>
+  <span class="absValue">
+    (18/21)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.product_catalog.jwtutils;
+&nbsp;
+&nbsp;import java.io.IOException;
+&nbsp;
+&nbsp;import javax.servlet.FilterChain;
+&nbsp;import javax.servlet.ServletException;
+&nbsp;import javax.servlet.http.HttpServletRequest;
+&nbsp;import javax.servlet.http.HttpServletResponse;
+&nbsp;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+&nbsp;import org.springframework.security.core.context.SecurityContextHolder;
+&nbsp;import org.springframework.security.core.userdetails.UserDetails;
+&nbsp;import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;import org.springframework.web.filter.OncePerRequestFilter;
+&nbsp;
+&nbsp;import io.jsonwebtoken.ExpiredJwtException;
+&nbsp;
+&nbsp;@Component
+<b class="fc">&nbsp;public class JwtFilter extends OncePerRequestFilter {</b>
+&nbsp;  @Autowired
+&nbsp;  private JwtUserDetailsService userDetailsService;
+&nbsp;
+&nbsp;  @Autowired
+&nbsp;  private TokenManager tokenManager;
+&nbsp;
+&nbsp;  @Override
+&nbsp;  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+&nbsp;      throws ServletException, IOException {
+&nbsp;
+<b class="fc">&nbsp;    String tokenHeader = request.getHeader(&quot;Authorization&quot;);</b>
+<b class="fc">&nbsp;    String username = null;</b>
+<b class="fc">&nbsp;    String token = null;</b>
+<b class="fc">&nbsp;    if (tokenHeader != null &amp;&amp; tokenHeader.startsWith(&quot;Bearer &quot;)) {</b>
+<b class="fc">&nbsp;      token = tokenHeader.substring(7);</b>
+&nbsp;      try {
+<b class="fc">&nbsp;        username = this.tokenManager.getUsernameFromToken(token);</b>
+<b class="fc">&nbsp;      } catch (IllegalArgumentException e) {</b>
+<b class="fc">&nbsp;        System.out.println(&quot;Unable to get JWT Token&quot;);</b>
+<b class="nc">&nbsp;      } catch (ExpiredJwtException e) {</b>
+<b class="nc">&nbsp;        System.out.println(&quot;JWT Token has expired&quot;);</b>
+<b class="fc">&nbsp;      }</b>
+&nbsp;    } else {
+<b class="nc">&nbsp;      System.out.println(&quot;Bearer String not found in token&quot;);</b>
+&nbsp;    }
+<b class="fc">&nbsp;    if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {</b>
+<b class="fc">&nbsp;      UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);</b>
+<b class="fc">&nbsp;      if (this.tokenManager.validateJwtToken(token, userDetails)) {</b>
+<b class="fc">&nbsp;        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,</b>
+<b class="fc">&nbsp;            null, userDetails.getAuthorities());</b>
+<b class="fc">&nbsp;        authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));</b>
+<b class="fc">&nbsp;        SecurityContextHolder.getContext().setAuthentication(authenticationToken);</b>
+&nbsp;      }
+&nbsp;    }
+<b class="fc">&nbsp;    filterChain.doFilter(request, response);</b>
+&nbsp;  }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-18 11:26</div>
+</div>
+</body>
+</html>
